@@ -16,7 +16,9 @@ do
     source_file="${base_name_src}.c"
 
     # Compile the test file, the source file, and the Unity framework
-    gcc -I ../Unity/ ../Unity/unity.c $source_file $test_file -o "${base_name_test}"
+    gcc -fprofile-arcs -ftest-coverage -I ../Unity/ ../Unity/unity.c $source_file $test_file -o "${base_name_test}"
     # Run the test
     ./$base_name_test
 done
+pip install gcovr
+gcovr --root . --html --html-details -o test_coverage.html
