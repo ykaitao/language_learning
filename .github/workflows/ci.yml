@@ -13,8 +13,8 @@ jobs:
     - name: Install GCC
       run: sudo apt-get install -y gcc
 
-    - name: Change to source directory and Compile and Run Tests
+    - name: Make script executable and run it
       run: |
         cd $GITHUB_WORKSPACE/c
-        gcc -I ../Unity/ ../Unity/unity.c utilities_test.c utilities.c -o utilities_test
-        ./utilities_test
+        chmod +x run_tests.sh
+        ./run_tests.sh
