@@ -37,5 +37,8 @@ with sr.AudioFile(audio_file) as source:
         print(f"Could not request results: {e}")
 
 # %%
+# pip install openai-whisper
+# whisper sample_data/RussianChapter17.mp3 --language Russian --model base
+
 # %%
 # %%
