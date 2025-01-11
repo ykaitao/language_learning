@@ -52,22 +52,36 @@ print(f"Translation quality score: {translation_quality}")
 evaluate_translation_quality("เราสบายดี", "we are good")
 
 # %%
-reference = [['this', 'is', 'a', 'test'], ['this', 'is', 'test']]
-candidate = ['this', 'is', 'a', 'test']
+reference = [["this", "is", "a", "test"], ["this", "is", "test"]]
+candidate = ["this", "is", "a", "test"]
 
 sentence_bleu(reference, candidate)
 
 # %%
-sentence_bleu([['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']], ['le', 'renard', 'brun', 'rapide', 'saute', 'par-dessus', 'le', 'chien', 'paresseux'])
+sentence_bleu(
+    [["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]],
+    [
+        "le",
+        "renard",
+        "brun",
+        "rapide",
+        "saute",
+        "par-dessus",
+        "le",
+        "chien",
+        "paresseux",
+    ],
+)
 
 # %%
 from deep_translator import GoogleTranslator
 
-def translate_text(text, target='en'):
-  return GoogleTranslator(source='auto', target=target).translate(text)
+
+def translate_text(text, target="en"):
+    return GoogleTranslator(source="auto", target=target).translate(text)
+
 
 translate_text("เราสบายดี")
 
 # %%
 # %%
-
