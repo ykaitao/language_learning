@@ -21,4 +21,3 @@ def addition(num1: float, num2: float) -> float:
     3.0
     """
     return num1 + num2
-
