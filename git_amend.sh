@@ -1,0 +1,1 @@
+black . && git add -u && git commit --amend && git push -f
